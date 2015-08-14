@@ -1,0 +1,11 @@
+{
+  "name": "programming-is-pointless",
+  "version": "1.0.0",
+  "description": "Project inspired by msdn article on point-free programming",
+  "author": "Carlos de Dios",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^5.8.21",
+    "jasmine-es6": "0.0.17"
+  }
+}
