@@ -21,10 +21,6 @@ describe("Forth (js version)", function() {
 
   let compareArrays = (expected, message, ...result) => expect(expected).toEqual(result, message);
 
-  describe("MATH", () => {
-    let { ADD, SUB, MUL, DIV, ABS, MIN, MAX, SQUARE, CUBE } = MATH;
-  });
-
   describe("QUEUE", () => {
     let { LIT, DROP, DDROP, DUP, DDUP, SWAP, OVER, ROT, RROT, CLEAR, NIP, TUCK } = QUEUE;
     let baseLit = compose(LIT(10), LIT(5), LIT(8));
@@ -96,6 +92,19 @@ describe("Forth (js version)", function() {
           pipe([], baseLit, LIT(12), RROT)
         , 'RROT should switch third and fourth'
         , 8, 5, 12, 10);
+    });
+  });
+
+  describe("MATH", () => {
+    let { LIT } = QUEUE;
+    let { ADD, SUB, MUL, DIV, ABS, MIN, MAX, SQUARE, CUBE } = MATH;
+
+    it("should have ADD adding the first and second in the queue", () => {
+      compareArrays(
+            pipe([], LIT(10), LIT(6), ADD)
+          , "ADD should add the first and second in the queue"
+          , 16
+        );
     });
   });
 });
