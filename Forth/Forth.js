@@ -53,7 +53,7 @@ module.exports = (() => {
 
   return {
     MATH: { ADD, SUB, MUL, DIV, ABS, MIN, MAX, SQUARE, CUBE },
-    STACK: { LIT, DROP, DDROP, DUP, DDUP, SWAP, OVER, ROT, RROT, CLEAR, NIP, TUCK },
+    QUEUE: { LIT, DROP, DDROP, DUP, DDUP, SWAP, OVER, ROT, RROT, CLEAR, NIP, TUCK },
     LOGIC: { NAND, NOT, AND, OR, NOR, XOR, XNOR, IF },
     EQUALITY: { GT, EQ, LT, LEQ, GEQ, NEQ },
     IO: { PRINT },
